@@ -1,0 +1,38 @@
+{
+  "name": "cyber-atlas",
+  "version": "2.0.0",
+  "description": "Multi-system diagnostic visual synthesis engine for biological and mechanical internals",
+  "scripts": {
+    "start": "npx http-server ./ -p 3000 -o",
+    "build": "tsc --noEmit && esbuild src/index.tsx --bundle --minify --sourcemap --outfile=dist/modularCompositePromptBuilder.js --loader:.tsx=tsx --loader:.ts=ts --define:process.env.NODE_ENV=\\\"production\\\"",
+    "test": "jest",
+    "lint": "eslint src tests --ext .ts,.tsx"
+  },
+  "keywords": [
+    "prompt-builder",
+    "image-generation",
+    "cyber-atlas",
+    "x-ray",
+    "cutaway",
+    "anatomy"
+  ],
+  "author": "Antigravity Pair Programmer",
+  "license": "MIT",
+  "dependencies": {
+    "firebase-tools": "^15.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "esbuild": "^0.20.0"
+  }
+}
